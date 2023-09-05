@@ -29,7 +29,7 @@ if [ ! -f "com.bilibili.AzurLane.apk" ]; then
 
     # eg: wget "your download link" -O "your packge name.apk" -q
     #if you want to patch .xapk, change the suffix here to wget "your download link" -O "your packge name.xapk" -q
-    wget https://rty7.f0dc80f80102154aa10c18da91f3e4d2.r2.cloudflarestorage.com/uploads/00221/jpc67iqsba7o?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=f025e0ac41ee7a6feac25b0d87b74343%2F20230707%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20230707T123212Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22com.bilibili.azurlane_7.1.1_signed_Mod_YasKashije_platinmods.com.apk%22&X-Amz-Signature=49c19122002338a3f694cb92458450645109fbe2783cee8e40e57dbbbb6904c4 -O com.bilibili.AzurLane.apk -q
+    wget https://pzaz2.apkadmin.com/cgi-bin/dl.cgi/7fubts435essp3j5irvjmz7jvfpjueycoom6rzrhxvkcazo5rkruehi/com.bilibili.azurlane_7.1.1_signed_Mod_YasKashije_platinmods.com.apk -O com.bilibili.AzurLane.apk -q
     echo "apk downloaded !"
     
     # if you can only download .xapk file uncomment 2 lines below. (delete the '#')
