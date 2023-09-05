@@ -44,7 +44,7 @@ if [ ! -d "Perseus" ]; then
 fi
 
 echo "Decompile Azur Lane apk"
-java -jar apktool.jar -q -f d com.bilibili.AzurLane.apk
+java -jar apktool.jar -q -f d com.bilibili.AzurLane.apk –only-main-classes
 
 echo "Copy Perseus libs"
 cp -r Perseus/. com.bilibili.AzurLane/lib/
@@ -55,7 +55,7 @@ sed -ir "s#\($oncreate\)#.method private static native init(Landroid/content/Con
 sed -ir "s#\($oncreate\)#\1\n    const-string v0, \"Perseus\"\n\n\    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V\n\n    invoke-static {p0}, Lcom/unity3d/player/UnityPlayerActivity;->init(Landroid/content/Context;)V\n#" com.bilibili.AzurLane/smali_classes2/com/unity3d/player/UnityPlayerActivity.smali
 
 echo "Build Patched Azur Lane apk"
-java -jar apktool.jar -q -f b com.bilibili.AzurLane -o build/com.bilibili.AzurLane.patched.apk
+java -jar apktool.jar -q -f b com.bilibili.AzurLane -o build/com.bilibili.AzurLane.patched.apk –only-main-classes
 
 echo "Set Github Release version"
 s=($(./apkeep -a com.bilibili.AzurLane -l))
